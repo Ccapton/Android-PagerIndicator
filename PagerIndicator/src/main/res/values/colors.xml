@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="pager_indicator_black">#333</color>
+    <color name="pager_indicator_white">#fff</color>
+    <color name="pager_indicator_red">#d00</color>
+    <color name="pager_indicator_blue">#00d</color>
+    <color name="pager_indicator_green">#0d0</color>
+</resources>

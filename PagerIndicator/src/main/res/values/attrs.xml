@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="PagerIndicator">
+        <attr name="textColor" format="color|reference"/>
+        <attr name="textCheckedColor" format="color|reference"/>
+        <attr name="textSize" format="dimension|reference"/>
+        <attr name="lineColor" format="color|reference"/>
+        <attr name="lineHeight" format="dimension|reference"/>
+        <attr name="lineProportion" format="float|reference"/>
+
+    </declare-styleable>
+</resources>
