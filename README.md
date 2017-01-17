@@ -10,7 +10,8 @@
 ![](https://raw.githubusercontent.com/Ccapton/pagerIndicator/master/indicator.gif)
 
 ### 如何配置
- allprojects {
+``` code
+allprojects {
 		repositories {
 			...
 			maven { url 'https://jitpack.io' }
@@ -19,6 +20,7 @@
  dependencies {
 	        compile 'com.github.Ccapton:PagerIndicator:1.0'
 	}
+```
 
 ### 公共方法
 
