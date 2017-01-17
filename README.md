@@ -10,6 +10,16 @@
 ![](https://raw.githubusercontent.com/Ccapton/pagerIndicator/master/indicator.gif)
 
 ### 如何配置
+build.gradle(Project)
+``` code
+allprojects {
+		repositories {
+			...
+			maven { url 'https://jitpack.io' }
+		}
+	}
+```
+build.gradle(Module:app)
 ``` code
 allprojects {
 		repositories {
