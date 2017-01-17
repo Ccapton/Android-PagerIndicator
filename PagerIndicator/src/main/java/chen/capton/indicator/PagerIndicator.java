@@ -6,6 +6,7 @@ import android.graphics.Canvas;
 import android.graphics.Paint;
 import android.support.v4.view.ViewPager;
 import android.util.AttributeSet;
+import android.util.Log;
 import android.view.Gravity;
 import android.view.View;
 import android.widget.HorizontalScrollView;
@@ -16,6 +17,8 @@ import java.util.ArrayList;
 import java.util.List;
 
 import chen.capton.indicator.R;
+
+import static android.content.ContentValues.TAG;
 
 /**
  * Created by CAPTON on 2017/1/13.
@@ -121,6 +124,7 @@ public class PagerIndicator extends HorizontalScrollView implements View.OnClick
         int heightMode=MeasureSpec.getMode(heightMeasureSpec);
         heightSize=heightMode==MeasureSpec.AT_MOST?DisplayUtil.dip2px(context,40):heightSize;
         width=widthSize;
+        Log.i(TAG, "onMeasure: width "+width);
         heigth=heightSize;
         while (!once) {
             LinearLayout.LayoutParams lp2 = new LinearLayout.LayoutParams(widthSize, heightSize);
@@ -134,7 +138,7 @@ public class PagerIndicator extends HorizontalScrollView implements View.OnClick
                 textView.setTextSize(DisplayUtil.px2sp(context,textSize));
                 textView.setTextColor(textColor);
                 textView.setGravity(Gravity.CENTER);
-                LayoutParams lp3=new LayoutParams(childWidth,heightSize-DisplayUtil.px2dip(context,lineHeight));
+                LinearLayout.LayoutParams lp3=new LinearLayout.LayoutParams(childWidth,heightSize-DisplayUtil.px2dip(context,lineHeight));
                 textView.setLayoutParams(lp3);
                 textView.setTag(i);
                 textView.setOnClickListener(this);
@@ -142,11 +146,21 @@ public class PagerIndicator extends HorizontalScrollView implements View.OnClick
                 textViewList.add(textView);
                  wrapper.addView(textView);
             }
+
+            if(childrenWidth<widthSize){
+                LinearLayout.LayoutParams lp4=new LinearLayout.LayoutParams(width/titleList.size(),heightSize-DisplayUtil.px2dip(context,lineHeight));
+                childWidthList.clear();
+                for (int i = 0; i <titleList.size(); i++) {
+                    textViewList.get(i).setLayoutParams(lp4);
+                    childWidthList.add(width/titleList.size());
+                }
+                childrenWidth=width;
+            }
             textViewList.get(0).setTextColor(textCheckedColor);
             addView(wrapper);
             once=true;
         }
-        setMeasuredDimension(widthSize,heightSize);
+        setMeasuredDimension(width,heigth);
     }
     int tempPosition=0;
     float temp=0;

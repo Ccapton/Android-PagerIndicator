@@ -32,13 +32,13 @@ public class MainActivity extends AppCompatActivity {
         viewList=new ArrayList<>();
         viewList2=new ArrayList<>();
         LayoutInflater inflater=LayoutInflater.from(this);
-        for (int i = 0; i <8; i++) {
+        for (int i = 0; i <10; i++) {
             View view=inflater.inflate(R.layout.page,null);
             TextView textview= (TextView) view.findViewById(R.id.text);
             textview.setText("Page"+i);
             viewList.add(view);
         }
-        for (int i = 0; i <8; i++) {
+        for (int i = 0; i <10; i++) {
             View view2=inflater.inflate(R.layout.page,null);
             TextView textview2= (TextView) view2.findViewById(R.id.text);
             textview2.setText("Page"+i);
@@ -84,7 +84,7 @@ public class MainActivity extends AppCompatActivity {
         };
         viewPager.setAdapter(adapter);
         viewPager2.setAdapter(adapter2);
-        for (int i = 0; i <8; i++) {
+        for (int i = 0; i <10; i++) {
             titleList.add("我很帅");
         }
         indicator= (PagerIndicator) findViewById(R.id.indicator);
