@@ -10,12 +10,21 @@
 ![](https://raw.githubusercontent.com/Ccapton/pagerIndicator/master/indicator.gif)
 
 ### 如何配置
-
-下载custom这个目录下的所有内容，拷贝到你的项目中即可使用;也可以将整个custom这个文件夹作为一个独立module，import进项目中。
+``` code
+allprojects {
+		repositories {
+			...
+			maven { url 'https://jitpack.io' }
+		}
+	}
+ dependencies {
+	        compile 'com.github.Ccapton:PagerIndicator:1.0'
+	}
+```
 
 ### 公共方法
-
-   **为必须要先调用的方法
+``` code
+  **为必须要先调用的方法
    
   setViewPager(ViewPager viewPager);//将要绑定的viewpager对象传进PagerIndicator对象中，供其调用。 **
   setTitleList(List<String> titleList) //设置标题的字符串ArrayList                               **
@@ -25,7 +34,8 @@
   setLineColor(int lineColor)    //设置横线的颜色
  	setLineHeight(int lineHeight)  //设置横线的厚度（高度）
  	setLineProportion(float lineProportion) //设置横线占标题宽度的比例（宽度）：0.0~1.0
- 	
+```
+	
 ### 使用方法
  1.例如：在activity_main.xml中,把该自定义控件PagerIndicator写在目标ViewPager前面
 ``` xml
