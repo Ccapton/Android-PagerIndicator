@@ -17,6 +17,9 @@ allprojects {
 			maven { url 'https://jitpack.io' }
 		}
 	}
+	
+	
+	
  dependencies {
 	        compile 'com.github.Ccapton:PagerIndicator:1.0'
 	}
