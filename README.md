@@ -20,16 +20,7 @@ allprojects {
 	}
 ```
 build.gradle(Module:app)
-``` code
-allprojects {
-		repositories {
-			...
-			maven { url 'https://jitpack.io' }
-		}
-	}
-	
-	
-	
+``` code 
  dependencies {
 	        compile 'com.github.Ccapton:PagerIndicator:1.0'
 	}
