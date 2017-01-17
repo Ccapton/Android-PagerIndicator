@@ -10,8 +10,15 @@
 ![](https://raw.githubusercontent.com/Ccapton/pagerIndicator/master/indicator.gif)
 
 ### 如何配置
-
-下载custom这个目录下的所有内容，拷贝到你的项目中即可使用;也可以将整个custom这个文件夹作为一个独立module，import进项目中。
+ allprojects {
+		repositories {
+			...
+			maven { url 'https://jitpack.io' }
+		}
+	}
+ dependencies {
+	        compile 'com.github.Ccapton:PagerIndicator:1.0'
+	}
 
 ### 公共方法
 
