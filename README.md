@@ -22,7 +22,7 @@ allprojects {
 build.gradle(Module:app)
 ``` code 
  dependencies {
-	        compile 'com.github.Ccapton:PagerIndicator:1.1'
+	        compile 'com.github.Ccapton:PagerIndicator:1.2'
 	}
 ```
 
